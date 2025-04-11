@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdón, wampantancita hermosa 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top right, #ffe0f0, #fce4ec);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.3em;
+      max-width: 500px;
+      color: #6a1b9a;
+    }
+    .gatito-container {
+      margin-top: 30px;
+      position: relative;
+    }
+    #gatito {
+      width: 150px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #gatito:hover {
+      transform: scale(1.05);
+    }
+    .botones {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      animation: rebotar 2s infinite alternate;
+    }
+    .botones button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff80ab;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .botones button:hover {
+      transform: scale(1.1);
+    }
+    .flores {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      animation: flotar 10s linear infinite;
+    }
+    .flores img {
+      position: absolute;
+      width: 80px;
+      animation: girar 20s linear infinite;
+    }
+    .galeria {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: carrusel 15s infinite linear;
+    }
+    .galeria img {
+      width: 180px;
+      border: 5px solid white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes flotar {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50px); }
+    }
+    @keyframes rebotar {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    @keyframes carrusel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-20%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Perdóname, wampantancita hermosa 💖</h1>
+  <p>
+    Sé que a veces soy un cabezón y que no siempre digo lo que siento,<br>
+    pero quiero que sepas que cada latido mío late por ti. <br>
+    Esta paginita es mi forma tonta pero sincera de decirte: lo siento. 🥺
+  </p>
+  <div class="gatito-container" onclick="maullar()">
+    <img id="gatito" src="https://i.imgur.com/6KZPzF1.png" alt="gatito tierno" />
+  </div>
+  <div class="botones">
+    <button>Soy un tonto</button>
+    <button>Un torpe</button>
+    <button>Un idiota</button>
+    <button>Un cabeza hueca</button>
+    <button>Un baboso</button>
+    <button>Un pilim tiquito</button>
+    <button>Un wampantan</button>
+  </div>
+  <div class="galeria">
+    <img src="https://i.imgur.com/ojkpnzN.jpeg" alt="foto 1">
+    <img src="https://i.imgur.com/NrB4uqg.jpeg" alt="foto 2">
+    <img src="https://i.imgur.com/nzMbkA4.jpeg" alt="foto 3">
+  </div>
+  <div class="flores">
+    <img src="https://i.imgur.com/1ddLQJv.png" style="top: 10%; left: 5%;">
+    <img src="https://i.imgur.com/1ddLQJv.png" style="top: 20%; right: 10%;">
+    <img src="https://i.imgur.com/1ddLQJv.png" style="bottom: 15%; left: 15%;">
+    <img src="https://i.imgur.com/1ddLQJv.png" style="bottom: 5%; right: 20%;">
+  </div>
+  <audio id="musica" autoplay loop>
+    <source src="musica.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  <audio id="maullido">
+    <source src="https://www.fesliyanstudios.com/play-mp3/6966" type="audio/mp3">
+  </audio>
+  <script>
+    function maullar() {
+      const sonido = document.getElementById("maullido");
+      sonido.play();
+    }
+  </script>
+</body>
+</html>
